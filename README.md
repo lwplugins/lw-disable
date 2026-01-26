@@ -1,4 +1,4 @@
-# LW Disable
+# Lightweight Disable
 
 Disable WordPress features: comments, commands, emojis, embeds, and more.
 
