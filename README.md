@@ -1,6 +1,6 @@
 # LW Disable
 
-Disable WordPress features: comments, commands, and more.
+Disable WordPress features: comments, commands, emojis, embeds, and more.
 
 [![Packagist](https://img.shields.io/packagist/v/lwplugins/lw-disable.svg)](https://packagist.org/packages/lwplugins/lw-disable)
 [![PHP](https://img.shields.io/badge/PHP-8.1%2B-blue.svg)](https://php.net)
@@ -9,8 +9,36 @@ Disable WordPress features: comments, commands, and more.
 
 ## Features
 
-- **Disable Comments** - Remove comments completely from your site
+### General
+
 - **Disable Commands** - Remove the admin command palette (Cmd/Ctrl+K)
+- **Disable Comments** - Remove comments completely from your site
+
+### Performance
+
+- **Disable Emojis** - Remove WordPress emoji scripts and styles
+- **Disable Embeds** - Remove oEmbed discovery and scripts
+- **Disable Heartbeat** - Remove WordPress heartbeat API
+- **Disable Block Library** - Remove Gutenberg CSS on frontend
+
+### Security
+
+- **Disable XML-RPC** - Disable XML-RPC protocol
+- **Restrict REST API** - Limit REST API to logged-in users only
+- **Disable App Passwords** - Remove application passwords feature
+- **Remove Generator** - Hide WordPress version meta tag
+
+### Head Cleanup
+
+- **Remove Shortlink** - Remove shortlink from head
+- **Remove RSD Link** - Remove Really Simple Discovery link
+- **Remove WLW Manifest** - Remove Windows Live Writer link
+- **Remove Version Strings** - Strip ?ver= from asset URLs
+- **Remove Adjacent Posts** - Remove prev/next post links
+
+### Content
+
+- **Disable RSS Feeds** - Disable all RSS feeds completely
 
 ## Installation
 
