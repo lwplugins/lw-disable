@@ -26,23 +26,32 @@ final class ParentPage {
 	 */
 	public static function get_registry(): array {
 		return array(
-			'lw-seo'     => array(
+			'lw-seo'          => array(
 				'name'        => 'LW SEO',
-				'description' => 'Essential SEO features without the bloat.',
+				'description' => __( 'Essential SEO features without the bloat.', 'lw-disable' ),
 				'icon'        => 'dashicons-search',
 				'icon_color'  => '#2271b1',
 				'constant'    => 'LW_SEO_VERSION',
 				'settings'    => 'lw-seo',
 				'github'      => 'https://github.com/lwplugins/lw-seo',
 			),
-			'lw-disable' => array(
+			'lw-disable'      => array(
 				'name'        => 'LW Disable',
-				'description' => 'Disable comments, commands, and more.',
-				'icon'        => 'dashicons-hidden',
+				'description' => __( 'Disable WordPress features like comments and admin commands.', 'lw-disable' ),
+				'icon'        => 'dashicons-dismiss',
 				'icon_color'  => '#d63638',
 				'constant'    => 'LW_DISABLE_VERSION',
 				'settings'    => 'lw-disable',
 				'github'      => 'https://github.com/lwplugins/lw-disable',
+			),
+			'lw-site-manager' => array(
+				'name'        => 'LW Site Manager',
+				'description' => __( 'Site maintenance via AI/REST using Abilities API.', 'lw-disable' ),
+				'icon'        => 'dashicons-admin-tools',
+				'icon_color'  => '#135e96',
+				'constant'    => 'LW_SITE_MANAGER_VERSION',
+				'settings'    => 'lw-site-manager',
+				'github'      => 'https://github.com/lwplugins/lw-site-manager',
 			),
 		);
 	}

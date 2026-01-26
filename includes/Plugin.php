@@ -10,8 +10,22 @@ declare(strict_types=1);
 namespace LightweightPlugins\Disable;
 
 use LightweightPlugins\Disable\Admin\SettingsPage;
+use LightweightPlugins\Disable\Features\AdjacentPosts;
+use LightweightPlugins\Disable\Features\ApplicationPasswords;
+use LightweightPlugins\Disable\Features\BlockLibrary;
 use LightweightPlugins\Disable\Features\Commands;
 use LightweightPlugins\Disable\Features\Comments;
+use LightweightPlugins\Disable\Features\Embeds;
+use LightweightPlugins\Disable\Features\Emojis;
+use LightweightPlugins\Disable\Features\Feeds;
+use LightweightPlugins\Disable\Features\Generator;
+use LightweightPlugins\Disable\Features\Heartbeat;
+use LightweightPlugins\Disable\Features\RestApi;
+use LightweightPlugins\Disable\Features\RsdLink;
+use LightweightPlugins\Disable\Features\Shortlink;
+use LightweightPlugins\Disable\Features\VersionStrings;
+use LightweightPlugins\Disable\Features\WlwManifest;
+use LightweightPlugins\Disable\Features\XmlRpc;
 
 /**
  * Main plugin class.
@@ -46,8 +60,31 @@ final class Plugin {
 	 * @return void
 	 */
 	private function init_features(): void {
+		// General.
 		new Commands();
 		new Comments();
+
+		// Performance.
+		new Emojis();
+		new Embeds();
+		new Heartbeat();
+		new BlockLibrary();
+
+		// Security.
+		new XmlRpc();
+		new RestApi();
+		new ApplicationPasswords();
+		new Generator();
+
+		// Head Cleanup.
+		new Shortlink();
+		new RsdLink();
+		new WlwManifest();
+		new VersionStrings();
+		new AdjacentPosts();
+
+		// Content.
+		new Feeds();
 	}
 
 	/**

@@ -33,8 +33,27 @@ final class Options {
 	 */
 	public static function get_defaults(): array {
 		return array(
-			'commands' => false,
-			'comments' => false,
+			// General.
+			'commands'              => false,
+			'comments'              => false,
+			// Performance.
+			'emojis'                => false,
+			'embeds'                => false,
+			'heartbeat'             => false,
+			'block_library'         => false,
+			// Security.
+			'xmlrpc'                => false,
+			'rest_api'              => false,
+			'application_passwords' => false,
+			'generator'             => false,
+			// Head Cleanup.
+			'shortlink'             => false,
+			'rsd_link'              => false,
+			'wlw_manifest'          => false,
+			'version_strings'       => false,
+			'adjacent_posts'        => false,
+			// Content.
+			'feeds'                 => false,
 		);
 	}
 

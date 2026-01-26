@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace LightweightPlugins\Disable\Admin;
 
+use LightweightPlugins\Disable\Admin\Settings\FieldsData;
 use LightweightPlugins\Disable\Options;
 
 /**
@@ -57,7 +58,9 @@ final class SettingsPage {
 		}
 
 		$this->maybe_save();
-		$options = Options::get_all();
+		$options      = Options::get_all();
+		$sections     = FieldsData::get_sections();
+		$descriptions = FieldsData::get_descriptions();
 
 		?>
 		<div class="wrap">
@@ -66,26 +69,22 @@ final class SettingsPage {
 
 			<form method="post">
 				<?php wp_nonce_field( 'lw_disable_save', 'lw_disable_nonce' ); ?>
-				<table class="form-table">
-					<tr>
-						<th scope="row"><?php esc_html_e( 'Commands', 'lw-disable' ); ?></th>
-						<td>
-							<label>
-								<input type="checkbox" name="lw_disable[commands]" value="1" <?php checked( $options['commands'] ); ?>>
-								<?php esc_html_e( 'Disable admin command palette (Cmd/Ctrl+K)', 'lw-disable' ); ?>
-							</label>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row"><?php esc_html_e( 'Comments', 'lw-disable' ); ?></th>
-						<td>
-							<label>
-								<input type="checkbox" name="lw_disable[comments]" value="1" <?php checked( $options['comments'] ); ?>>
-								<?php esc_html_e( 'Disable comments completely', 'lw-disable' ); ?>
-							</label>
-						</td>
-					</tr>
-				</table>
+				<?php foreach ( $sections as $section ) : ?>
+					<h2><?php echo esc_html( $section['title'] ); ?></h2>
+					<table class="form-table">
+						<?php foreach ( $section['fields'] as $key => $label ) : ?>
+							<tr>
+								<th scope="row"><?php echo esc_html( $label ); ?></th>
+								<td>
+									<label>
+										<input type="checkbox" name="lw_disable[<?php echo esc_attr( $key ); ?>]" value="1" <?php checked( $options[ $key ] ?? false ); ?>>
+										<?php echo esc_html( $descriptions[ $key ] ?? '' ); ?>
+									</label>
+								</td>
+							</tr>
+						<?php endforeach; ?>
+					</table>
+				<?php endforeach; ?>
 				<?php submit_button(); ?>
 			</form>
 		</div>
@@ -108,10 +107,12 @@ final class SettingsPage {
 			return;
 		}
 
-		$options = array(
-			'commands' => ! empty( $_POST['lw_disable']['commands'] ),
-			'comments' => ! empty( $_POST['lw_disable']['comments'] ),
-		);
+		$defaults = Options::get_defaults();
+		$options  = array();
+
+		foreach ( array_keys( $defaults ) as $key ) {
+			$options[ $key ] = ! empty( $_POST['lw_disable'][ $key ] );
+		}
 
 		Options::save( $options );
 
