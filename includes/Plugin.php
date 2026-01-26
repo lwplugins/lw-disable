@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace LightweightPlugins\Disable;
 
 use LightweightPlugins\Disable\Admin\SettingsPage;
+use LightweightPlugins\Disable\CLI\Commands as CLICommands;
 use LightweightPlugins\Disable\Features\AdjacentPosts;
 use LightweightPlugins\Disable\Features\ApplicationPasswords;
 use LightweightPlugins\Disable\Features\BlockLibrary;
@@ -39,6 +40,7 @@ final class Plugin {
 		$this->init_hooks();
 		$this->init_features();
 		$this->init_admin();
+		$this->init_cli();
 	}
 
 	/**
@@ -95,6 +97,17 @@ final class Plugin {
 	private function init_admin(): void {
 		if ( is_admin() ) {
 			new SettingsPage();
+		}
+	}
+
+	/**
+	 * Initialize CLI commands.
+	 *
+	 * @return void
+	 */
+	private function init_cli(): void {
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			\WP_CLI::add_command( 'lw-disable', CLICommands::class );
 		}
 	}
 

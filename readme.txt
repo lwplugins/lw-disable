@@ -3,7 +3,7 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -55,7 +55,69 @@ Part of [LW Plugins](https://lwplugins.com) - lightweight WordPress plugins.
 
 Or: `composer require lwplugins/lw-disable`
 
+== WP-CLI ==
+
+Manage features via command line.
+
+= List all features =
+
+`wp lw-disable list`
+
+Shows a table with all features and their current status (enabled/disabled).
+
+= Enable a feature =
+
+`wp lw-disable enable <feature>`
+
+Examples:
+`wp lw-disable enable emojis`
+`wp lw-disable enable comments`
+`wp lw-disable enable xmlrpc`
+
+= Disable a feature =
+
+`wp lw-disable disable <feature>`
+
+Examples:
+`wp lw-disable disable emojis`
+`wp lw-disable disable heartbeat`
+
+= Enable all features =
+
+`wp lw-disable enable-all`
+
+Enables all disable features at once.
+
+= Disable all features =
+
+`wp lw-disable disable-all`
+
+Disables all features (restores WordPress defaults).
+
+= Available features =
+
+* commands - Admin command palette
+* comments - Comments system
+* emojis - Emoji scripts/styles
+* embeds - oEmbed system
+* heartbeat - Heartbeat API
+* block_library - Gutenberg CSS
+* xmlrpc - XML-RPC protocol
+* rest_api - REST API restriction
+* application_passwords - App passwords
+* generator - Version meta tag
+* shortlink - Shortlink header
+* rsd_link - RSD link
+* wlw_manifest - WLW manifest
+* version_strings - Asset version strings
+* adjacent_posts - Adjacent post links
+* feeds - RSS feeds
+
 == Changelog ==
+
+= 1.2.0 =
+* Add WP-CLI support
+* Commands: list, enable, disable, enable-all, disable-all
 
 = 1.1.0 =
 * Add 14 new disable features

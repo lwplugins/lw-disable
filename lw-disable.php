@@ -3,7 +3,7 @@
  * Plugin Name:       LW Disable
  * Plugin URI:        https://github.com/lwplugins/lw-disable
  * Description:       Disable WordPress features: comments, commands, and more.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 6.0
  * Requires PHP:      8.1
  * Author:            LW Plugins
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'LW_DISABLE_VERSION', '1.1.0' );
+define( 'LW_DISABLE_VERSION', '1.2.0' );
 define( 'LW_DISABLE_FILE', __FILE__ );
 define( 'LW_DISABLE_PATH', plugin_dir_path( __FILE__ ) );
 

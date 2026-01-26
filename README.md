@@ -50,9 +50,54 @@ Or download and upload to `/wp-content/plugins/`.
 
 ## Usage
 
+### Admin UI
+
 1. Go to **LW Plugins → Disable**
 2. Check the features you want to disable
 3. Save
+
+### WP-CLI
+
+```bash
+# List all features and their status
+wp lw-disable list
+
+# Enable a feature
+wp lw-disable enable emojis
+wp lw-disable enable comments
+wp lw-disable enable xmlrpc
+
+# Disable a feature
+wp lw-disable disable emojis
+wp lw-disable disable heartbeat
+
+# Enable all features at once
+wp lw-disable enable-all
+
+# Disable all features (restore WP defaults)
+wp lw-disable disable-all
+```
+
+**Available features:**
+
+| Feature | Description |
+|---------|-------------|
+| `commands` | Admin command palette |
+| `comments` | Comments system |
+| `emojis` | Emoji scripts/styles |
+| `embeds` | oEmbed system |
+| `heartbeat` | Heartbeat API |
+| `block_library` | Gutenberg CSS |
+| `xmlrpc` | XML-RPC protocol |
+| `rest_api` | REST API restriction |
+| `application_passwords` | App passwords |
+| `generator` | Version meta tag |
+| `shortlink` | Shortlink header |
+| `rsd_link` | RSD link |
+| `wlw_manifest` | WLW manifest |
+| `version_strings` | Asset version strings |
+| `adjacent_posts` | Adjacent post links |
+| `feeds` | RSS feeds |
 
 ## Links
 
