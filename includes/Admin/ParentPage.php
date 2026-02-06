@@ -15,49 +15,81 @@ namespace LightweightPlugins\Disable\Admin;
 final class ParentPage {
 
 	/**
-	 * Menu slug.
+	 * Parent menu slug.
 	 */
 	public const SLUG = 'lw-plugins';
 
 	/**
-	 * Get plugins registry.
+	 * Remote registry URL (raw GitHub).
+	 */
+	private const REGISTRY_URL = 'https://raw.githubusercontent.com/lwplugins/registry/main/plugins.json';
+
+	/**
+	 * Transient cache key and TTL.
+	 */
+	private const CACHE_KEY = 'lw_plugins_registry';
+	private const CACHE_TTL = 43200; // 12 hours in seconds.
+
+	/**
+	 * Get all LW plugins registry (remote with local fallback).
 	 *
 	 * @return array<string, array<string, string>>
 	 */
-	public static function get_registry(): array {
-		return array(
-			'lw-seo'          => array(
-				'name'        => 'LW SEO',
-				'description' => __( 'Essential SEO features without the bloat.', 'lw-disable' ),
-				'icon'        => 'dashicons-search',
-				'icon_color'  => '#2271b1',
-				'constant'    => 'LW_SEO_VERSION',
-				'settings'    => 'lw-seo',
-				'github'      => 'https://github.com/lwplugins/lw-seo',
-			),
-			'lw-disable'      => array(
-				'name'        => 'LW Disable',
-				'description' => __( 'Disable WordPress features like comments and admin commands.', 'lw-disable' ),
-				'icon'        => 'dashicons-dismiss',
-				'icon_color'  => '#d63638',
-				'constant'    => 'LW_DISABLE_VERSION',
-				'settings'    => 'lw-disable',
-				'github'      => 'https://github.com/lwplugins/lw-disable',
-			),
-			'lw-site-manager' => array(
-				'name'        => 'LW Site Manager',
-				'description' => __( 'Site maintenance via AI/REST using Abilities API.', 'lw-disable' ),
-				'icon'        => 'dashicons-admin-tools',
-				'icon_color'  => '#135e96',
-				'constant'    => 'LW_SITE_MANAGER_VERSION',
-				'settings'    => 'lw-site-manager',
-				'github'      => 'https://github.com/lwplugins/lw-site-manager',
-			),
-		);
+	public static function get_plugins_registry(): array {
+		$cached = get_transient( self::CACHE_KEY );
+
+		if ( is_array( $cached ) && ! empty( $cached ) ) {
+			return $cached;
+		}
+
+		$remote = self::fetch_remote_registry();
+
+		if ( $remote ) {
+			set_transient( self::CACHE_KEY, $remote, self::CACHE_TTL );
+			return $remote;
+		}
+
+		return self::get_local_fallback();
 	}
 
 	/**
-	 * Register parent menu if not exists.
+	 * Fetch plugin registry from GitHub.
+	 *
+	 * @return array<string, array<string, string>>|null
+	 */
+	private static function fetch_remote_registry(): ?array {
+		$response = wp_remote_get( self::REGISTRY_URL, [ 'timeout' => 5 ] );
+
+		if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
+			return null;
+		}
+
+		$data = json_decode( wp_remote_retrieve_body( $response ), true );
+
+		return is_array( $data ) && ! empty( $data ) ? $data : null;
+	}
+
+	/**
+	 * Local fallback when remote is unavailable.
+	 *
+	 * @return array<string, array<string, string>>
+	 */
+	private static function get_local_fallback(): array {
+		return [
+			'lw-disable' => [
+				'name'          => 'LW Disable',
+				'description'   => 'Disable WordPress features like comments.',
+				'icon'          => 'dashicons-dismiss',
+				'icon_color'    => '#d63638',
+				'constant'      => 'LW_DISABLE_VERSION',
+				'settings_page' => 'lw-disable',
+				'github'        => 'https://github.com/lwplugins/lw-disable',
+			],
+		];
+	}
+
+	/**
+	 * Register the parent menu if not exists.
 	 *
 	 * @return void
 	 */
@@ -69,18 +101,18 @@ final class ParentPage {
 		}
 
 		add_menu_page(
-			'LW Plugins',
-			'LW Plugins',
+			__( 'LW Plugins', 'lw-disable' ),
+			__( 'LW Plugins', 'lw-disable' ),
 			'manage_options',
 			self::SLUG,
-			array( self::class, 'render' ),
+			[ self::class, 'render' ],
 			'dashicons-superhero-alt',
 			80
 		);
 	}
 
 	/**
-	 * Render parent page.
+	 * Render the parent page.
 	 *
 	 * @return void
 	 */
@@ -90,50 +122,74 @@ final class ParentPage {
 		}
 
 		?>
-		<div class="wrap">
-			<h1>LW Plugins</h1>
-			<p><?php esc_html_e( 'Lightweight plugins for WordPress.', 'lw-disable' ); ?></p>
+		<div class="wrap lw-plugins-overview">
+			<h1><?php esc_html_e( 'LW Plugins', 'lw-disable' ); ?></h1>
+			<p><?php esc_html_e( 'Lightweight plugins for WordPress - minimal footprint, maximum impact.', 'lw-disable' ); ?></p>
 
-			<div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+			<div class="lw-plugins-cards" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+				<?php self::render_all_plugin_cards(); ?>
+
 				<?php
-				foreach ( self::get_registry() as $plugin ) {
-					self::render_card( $plugin );
-				}
+				/**
+				 * Add additional plugin cards to the LW Plugins overview page.
+				 *
+				 * @since 1.0.0
+				 */
+				do_action( 'lw_plugins_overview_cards' );
 				?>
 			</div>
 
-			<p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccd0d4;">
-				<a href="https://github.com/lwplugins" target="_blank">GitHub</a> |
-				<a href="https://lwplugins.com" target="_blank">Website</a>
-			</p>
+			<div class="lw-plugins-footer" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccd0d4;">
+				<p>
+					<a href="https://github.com/lwplugins" target="_blank">GitHub</a> |
+					<a href="https://lwplugins.com" target="_blank">Website</a>
+				</p>
+			</div>
 		</div>
 		<?php
 	}
 
 	/**
-	 * Render plugin card.
+	 * Render all plugin cards from registry.
 	 *
-	 * @param array<string, string> $plugin Plugin data.
 	 * @return void
 	 */
-	private static function render_card( array $plugin ): void {
-		$is_active = defined( $plugin['constant'] );
+	private static function render_all_plugin_cards(): void {
+		$plugins = self::get_plugins_registry();
 
+		foreach ( $plugins as $slug => $plugin ) {
+			self::render_plugin_card( $slug, $plugin );
+		}
+	}
+
+	/**
+	 * Render a single plugin card.
+	 *
+	 * @param string                                                                                                                              $slug   Plugin slug.
+	 * @param array{name: string, description: string, icon: string, icon_color: string, constant: string, settings_page: string, github: string} $plugin Plugin data.
+	 * @return void
+	 */
+	private static function render_plugin_card( string $slug, array $plugin ): void {
+		$is_active = defined( $plugin['constant'] );
 		?>
-		<div style="background: #fff; border: 1px solid #ccd0d4; border-radius: 4px; padding: 20px; width: 300px;">
+		<div class="lw-plugin-card" style="background: #fff; border: 1px solid #ccd0d4; border-radius: 4px; padding: 20px; width: 300px;">
 			<h2 style="margin-top: 0;">
 				<span class="dashicons <?php echo esc_attr( $plugin['icon'] ); ?>" style="color: <?php echo esc_attr( $plugin['icon_color'] ); ?>;"></span>
 				<?php echo esc_html( $plugin['name'] ); ?>
 				<?php if ( $is_active ) : ?>
-					<span style="background: #00a32a; color: #fff; font-size: 11px; padding: 2px 6px; border-radius: 3px; margin-left: 8px;">Active</span>
+					<span style="display: inline-block; background: #00a32a; color: #fff; font-size: 11px; padding: 2px 6px; border-radius: 3px; margin-left: 8px; vertical-align: middle;"><?php esc_html_e( 'Active', 'lw-disable' ); ?></span>
 				<?php endif; ?>
 			</h2>
 			<p><?php echo esc_html( $plugin['description'] ); ?></p>
 			<p>
 				<?php if ( $is_active ) : ?>
-					<a href="<?php echo esc_url( admin_url( 'admin.php?page=' . $plugin['settings'] ) ); ?>" class="button button-primary">Settings</a>
+					<a href="<?php echo esc_url( admin_url( 'admin.php?page=' . $plugin['settings_page'] ) ); ?>" class="button button-primary">
+						<?php esc_html_e( 'Settings', 'lw-disable' ); ?>
+					</a>
 				<?php else : ?>
-					<a href="<?php echo esc_url( $plugin['github'] ); ?>" class="button" target="_blank">Get Plugin</a>
+					<a href="<?php echo esc_url( $plugin['github'] ); ?>" class="button" target="_blank">
+						<?php esc_html_e( 'Get Plugin', 'lw-disable' ); ?>
+					</a>
 				<?php endif; ?>
 			</p>
 		</div>
