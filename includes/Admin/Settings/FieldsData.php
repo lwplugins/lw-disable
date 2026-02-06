@@ -23,6 +23,7 @@ final class FieldsData {
 		return array(
 			'general'      => array(
 				'title'  => __( 'General', 'lw-disable' ),
+				'icon'   => 'dashicons-admin-settings',
 				'fields' => array(
 					'commands' => __( 'Commands', 'lw-disable' ),
 					'comments' => __( 'Comments', 'lw-disable' ),
@@ -30,6 +31,7 @@ final class FieldsData {
 			),
 			'performance'  => array(
 				'title'  => __( 'Performance', 'lw-disable' ),
+				'icon'   => 'dashicons-performance',
 				'fields' => array(
 					'emojis'        => __( 'Emojis', 'lw-disable' ),
 					'embeds'        => __( 'Embeds', 'lw-disable' ),
@@ -39,6 +41,7 @@ final class FieldsData {
 			),
 			'security'     => array(
 				'title'  => __( 'Security', 'lw-disable' ),
+				'icon'   => 'dashicons-shield',
 				'fields' => array(
 					'xmlrpc'                => __( 'XML-RPC', 'lw-disable' ),
 					'rest_api'              => __( 'REST API', 'lw-disable' ),
@@ -48,6 +51,7 @@ final class FieldsData {
 			),
 			'head_cleanup' => array(
 				'title'  => __( 'Head Cleanup', 'lw-disable' ),
+				'icon'   => 'dashicons-editor-code',
 				'fields' => array(
 					'shortlink'       => __( 'Shortlink', 'lw-disable' ),
 					'rsd_link'        => __( 'RSD Link', 'lw-disable' ),
@@ -58,6 +62,7 @@ final class FieldsData {
 			),
 			'content'      => array(
 				'title'  => __( 'Content', 'lw-disable' ),
+				'icon'   => 'dashicons-admin-post',
 				'fields' => array(
 					'feeds' => __( 'RSS Feeds', 'lw-disable' ),
 				),

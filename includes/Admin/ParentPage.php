@@ -58,7 +58,7 @@ final class ParentPage {
 	 * @return array<string, array<string, string>>|null
 	 */
 	private static function fetch_remote_registry(): ?array {
-		$response = wp_remote_get( self::REGISTRY_URL, [ 'timeout' => 5 ] );
+		$response = wp_remote_get( self::REGISTRY_URL, array( 'timeout' => 5 ) );
 
 		if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
 			return null;
@@ -75,8 +75,8 @@ final class ParentPage {
 	 * @return array<string, array<string, string>>
 	 */
 	private static function get_local_fallback(): array {
-		return [
-			'lw-disable' => [
+		return array(
+			'lw-disable' => array(
 				'name'          => 'LW Disable',
 				'description'   => 'Disable WordPress features like comments.',
 				'icon'          => 'dashicons-dismiss',
@@ -84,8 +84,8 @@ final class ParentPage {
 				'constant'      => 'LW_DISABLE_VERSION',
 				'settings_page' => 'lw-disable',
 				'github'        => 'https://github.com/lwplugins/lw-disable',
-			],
-		];
+			),
+		);
 	}
 
 	/**
@@ -105,7 +105,7 @@ final class ParentPage {
 			__( 'LW Plugins', 'lw-disable' ),
 			'manage_options',
 			self::SLUG,
-			[ self::class, 'render' ],
+			array( self::class, 'render' ),
 			'dashicons-superhero-alt',
 			80
 		);
