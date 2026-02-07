@@ -1,0 +1,222 @@
+# Copyright (C) 2026 LW Plugins
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lightweight Disable 1.2.3\n"
+"Report-Msgid-Bugs-To: https://github.com/lwplugins/lw-disable/issues\n"
+"POT-Creation-Date: 2026-02-07T08:43:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LW Plugins <info@lwplugins.com>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: lw-disable\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#: lw-disable.php
+msgid "Lightweight Disable"
+msgstr "Lightweight Letiltás"
+
+#. Plugin URI of the plugin
+#: lw-disable.php
+msgid "https://github.com/lwplugins/lw-disable"
+msgstr "https://github.com/lwplugins/lw-disable"
+
+#. Description of the plugin
+#: lw-disable.php
+msgid "Disable WordPress features: comments, commands, and more."
+msgstr "WordPress funkciók letiltása: hozzászólások, parancsok és még több."
+
+#. Author of the plugin
+#: lw-disable.php includes/Admin/ParentPage.php:104
+#: includes/Admin/ParentPage.php:105 includes/Admin/ParentPage.php:126
+msgid "LW Plugins"
+msgstr "LW Plugins"
+
+#. Author URI of the plugin
+#: lw-disable.php
+msgid "https://lwplugins.com"
+msgstr "https://lwplugins.com"
+
+#: includes/Admin/ParentPage.php:127
+msgid "Lightweight plugins for WordPress - minimal footprint, maximum impact."
+msgstr "Könnyű WordPress bővítmények – minimális terhelés, maximális hatás."
+
+#: includes/Admin/ParentPage.php:180
+msgid "Active"
+msgstr "Aktív"
+
+#: includes/Admin/ParentPage.php:187 includes/Plugin.php:135
+msgid "Settings"
+msgstr "Beállítások"
+
+#: includes/Admin/ParentPage.php:191
+msgid "Get Plugin"
+msgstr "Bővítmény letöltése"
+
+#: includes/Admin/Settings/FieldsData.php:25
+msgid "General"
+msgstr "Általános"
+
+#: includes/Admin/Settings/FieldsData.php:28
+msgid "Commands"
+msgstr "Parancsok"
+
+#: includes/Admin/Settings/FieldsData.php:29
+msgid "Comments"
+msgstr "Hozzászólások"
+
+#: includes/Admin/Settings/FieldsData.php:33
+msgid "Performance"
+msgstr "Teljesítmény"
+
+#: includes/Admin/Settings/FieldsData.php:36
+msgid "Emojis"
+msgstr "Emojik"
+
+#: includes/Admin/Settings/FieldsData.php:37
+msgid "Embeds"
+msgstr "Beágyazások"
+
+#: includes/Admin/Settings/FieldsData.php:38
+msgid "Heartbeat"
+msgstr "Heartbeat"
+
+#: includes/Admin/Settings/FieldsData.php:39
+msgid "Block Library"
+msgstr "Blokk könyvtár"
+
+#: includes/Admin/Settings/FieldsData.php:43
+msgid "Security"
+msgstr "Biztonság"
+
+#: includes/Admin/Settings/FieldsData.php:46
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+#: includes/Admin/Settings/FieldsData.php:47
+msgid "REST API"
+msgstr "REST API"
+
+#: includes/Admin/Settings/FieldsData.php:48
+msgid "App Passwords"
+msgstr "Alkalmazásjelszavak"
+
+#: includes/Admin/Settings/FieldsData.php:49
+msgid "Generator"
+msgstr "Generator"
+
+#: includes/Admin/Settings/FieldsData.php:53
+msgid "Head Cleanup"
+msgstr "Head tisztítás"
+
+#: includes/Admin/Settings/FieldsData.php:56
+msgid "Shortlink"
+msgstr "Rövid link"
+
+#: includes/Admin/Settings/FieldsData.php:57
+msgid "RSD Link"
+msgstr "RSD link"
+
+#: includes/Admin/Settings/FieldsData.php:58
+msgid "WLW Manifest"
+msgstr "WLW manifest"
+
+#: includes/Admin/Settings/FieldsData.php:59
+msgid "Version Strings"
+msgstr "Verzióstringek"
+
+#: includes/Admin/Settings/FieldsData.php:60
+msgid "Adjacent Posts"
+msgstr "Szomszédos bejegyzések"
+
+#: includes/Admin/Settings/FieldsData.php:64
+msgid "Content"
+msgstr "Tartalom"
+
+#: includes/Admin/Settings/FieldsData.php:67
+msgid "RSS Feeds"
+msgstr "RSS feedek"
+
+#: includes/Admin/Settings/FieldsData.php:80
+msgid "Disable admin command palette (Cmd/Ctrl+K)"
+msgstr "Admin parancspaletta letiltása (Cmd/Ctrl+K)"
+
+#: includes/Admin/Settings/FieldsData.php:81
+msgid "Disable comments completely"
+msgstr "Hozzászólások teljes letiltása"
+
+#: includes/Admin/Settings/FieldsData.php:82
+msgid "Disable WordPress emoji scripts and styles"
+msgstr "WordPress emoji scriptek és stílusok letiltása"
+
+#: includes/Admin/Settings/FieldsData.php:83
+msgid "Disable oEmbed discovery and scripts"
+msgstr "oEmbed felderítés és scriptek letiltása"
+
+#: includes/Admin/Settings/FieldsData.php:84
+msgid "Disable WordPress heartbeat API"
+msgstr "WordPress heartbeat API letiltása"
+
+#: includes/Admin/Settings/FieldsData.php:85
+msgid "Disable Gutenberg block CSS on frontend"
+msgstr "Gutenberg blokk CSS letiltása a frontend oldalon"
+
+#: includes/Admin/Settings/FieldsData.php:86
+msgid "Disable XML-RPC protocol"
+msgstr "XML-RPC protokoll letiltása"
+
+#: includes/Admin/Settings/FieldsData.php:87
+msgid "Restrict REST API to logged-in users"
+msgstr "REST API korlátozása bejelentkezett felhasználókra"
+
+#: includes/Admin/Settings/FieldsData.php:88
+msgid "Disable application passwords"
+msgstr "Alkalmazásjelszavak letiltása"
+
+#: includes/Admin/Settings/FieldsData.php:89
+msgid "Remove WordPress version meta tag"
+msgstr "WordPress verzió meta tag eltávolítása"
+
+#: includes/Admin/Settings/FieldsData.php:90
+msgid "Remove shortlink from head"
+msgstr "Rövid link eltávolítása a head-ből"
+
+#: includes/Admin/Settings/FieldsData.php:91
+msgid "Remove Really Simple Discovery link"
+msgstr "Really Simple Discovery link eltávolítása"
+
+#: includes/Admin/Settings/FieldsData.php:92
+msgid "Remove Windows Live Writer link"
+msgstr "Windows Live Writer link eltávolítása"
+
+#: includes/Admin/Settings/FieldsData.php:93
+msgid "Remove ?ver= query strings from assets"
+msgstr "?ver= query stringek eltávolítása az assetekből"
+
+#: includes/Admin/Settings/FieldsData.php:94
+msgid "Remove prev/next post links from head"
+msgstr "Előző/következő bejegyzés linkek eltávolítása a head-ből"
+
+#: includes/Admin/Settings/FieldsData.php:95
+msgid "Disable RSS feeds completely"
+msgstr "RSS feedek teljes letiltása"
+
+#: includes/Admin/SettingsPage.php:43 includes/Admin/SettingsPage.php:44
+msgid "Disable"
+msgstr "Letiltás"
+
+#: includes/Admin/SettingsPage.php:100
+msgid "LW Disable"
+msgstr "LW Disable"
+
+#: includes/Admin/SettingsPage.php:104
+msgid "Settings saved."
+msgstr "Beállítások elmentve."
+
+#: includes/Features/RestApi.php:44
+msgid "REST API restricted to authenticated users."
+msgstr "REST API korlátozva hitelesített felhasználókra."
