@@ -34,7 +34,6 @@ final class Options {
 	public static function get_defaults(): array {
 		return array(
 			// General.
-			'commands'              => false,
 			'comments'              => false,
 			// Performance.
 			'emojis'                => false,

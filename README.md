@@ -1,6 +1,6 @@
 # Lightweight Disable
 
-Disable WordPress features: comments, commands, emojis, embeds, and more.
+Disable WordPress features: comments, emojis, embeds, and more.
 
 [![Packagist](https://img.shields.io/packagist/v/lwplugins/lw-disable.svg)](https://packagist.org/packages/lwplugins/lw-disable)
 [![PHP](https://img.shields.io/badge/PHP-8.1%2B-blue.svg)](https://php.net)
@@ -11,7 +11,6 @@ Disable WordPress features: comments, commands, emojis, embeds, and more.
 
 ### General
 
-- **Disable Commands** - Remove the admin command palette (Cmd/Ctrl+K)
 - **Disable Comments** - Remove comments completely from your site
 
 ### Performance
@@ -82,7 +81,6 @@ wp lw-disable disable-all
 
 | Feature | Description |
 |---------|-------------|
-| `commands` | Admin command palette |
 | `comments` | Comments system |
 | `emojis` | Emoji scripts/styles |
 | `embeds` | oEmbed system |

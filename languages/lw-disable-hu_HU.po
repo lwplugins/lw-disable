@@ -27,8 +27,8 @@ msgstr "https://github.com/lwplugins/lw-disable"
 
 #. Description of the plugin
 #: lw-disable.php
-msgid "Disable WordPress features: comments, commands, and more."
-msgstr "WordPress funkciók letiltása: hozzászólások, parancsok és még több."
+msgid "Disable WordPress features: comments, emojis, embeds, and more."
+msgstr "WordPress funkciók letiltása: hozzászólások, emojik, beágyazások és még több."
 
 #. Author of the plugin
 #: lw-disable.php includes/Admin/ParentPage.php:104
@@ -62,10 +62,6 @@ msgid "General"
 msgstr "Általános"
 
 #: includes/Admin/Settings/FieldsData.php:28
-msgid "Commands"
-msgstr "Parancsok"
-
-#: includes/Admin/Settings/FieldsData.php:29
 msgid "Comments"
 msgstr "Hozzászólások"
 
@@ -141,11 +137,7 @@ msgstr "Tartalom"
 msgid "RSS Feeds"
 msgstr "RSS feedek"
 
-#: includes/Admin/Settings/FieldsData.php:80
-msgid "Disable admin command palette (Cmd/Ctrl+K)"
-msgstr "Admin parancspaletta letiltása (Cmd/Ctrl+K)"
-
-#: includes/Admin/Settings/FieldsData.php:81
+#: includes/Admin/Settings/FieldsData.php:79
 msgid "Disable comments completely"
 msgstr "Hozzászólások teljes letiltása"
 

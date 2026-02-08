@@ -14,7 +14,6 @@ use LightweightPlugins\Disable\CLI\Commands as CLICommands;
 use LightweightPlugins\Disable\Features\AdjacentPosts;
 use LightweightPlugins\Disable\Features\ApplicationPasswords;
 use LightweightPlugins\Disable\Features\BlockLibrary;
-use LightweightPlugins\Disable\Features\Commands;
 use LightweightPlugins\Disable\Features\Comments;
 use LightweightPlugins\Disable\Features\Embeds;
 use LightweightPlugins\Disable\Features\Emojis;
@@ -63,7 +62,6 @@ final class Plugin {
 	 */
 	private function init_features(): void {
 		// General.
-		new Commands();
 		new Comments();
 
 		// Performance.

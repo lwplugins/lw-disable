@@ -1,6 +1,6 @@
 {
     "name": "lwplugins/lw-disable",
-    "description": "Disable WordPress features: comments, commands, and more.",
+    "description": "Disable WordPress features: comments, emojis, embeds, and more.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [

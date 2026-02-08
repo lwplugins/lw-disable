@@ -3,12 +3,12 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Disable WordPress features: comments, commands, emojis, embeds, and more.
+Disable WordPress features: comments, emojis, embeds, and more.
 
 == Description ==
 
@@ -16,7 +16,6 @@ Lightweight plugin to disable WordPress features you don't need.
 
 = General =
 
-* Disable admin command palette (Cmd/Ctrl+K)
 * Disable comments completely
 
 = Performance =
@@ -96,7 +95,6 @@ Disables all features (restores WordPress defaults).
 
 = Available features =
 
-* commands - Admin command palette
 * comments - Comments system
 * emojis - Emoji scripts/styles
 * embeds - oEmbed system
@@ -114,6 +112,9 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.2.7 =
+* Remove commands feature (causes core issues from WordPress 6.9+)
 
 = 1.2.6 =
 * Fix admin notice isolation for notices relocated by WordPress core JS
