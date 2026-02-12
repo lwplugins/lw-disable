@@ -27,6 +27,7 @@ final class SettingsPage {
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_menu' ) );
+		add_action( 'admin_init', array( $this, 'maybe_save' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 	}
 
@@ -74,7 +75,7 @@ final class SettingsPage {
 		wp_enqueue_script(
 			'lw-disable-admin',
 			LW_DISABLE_URL . 'assets/js/admin.js',
-			array( 'jquery' ),
+			array(),
 			LW_DISABLE_VERSION,
 			true
 		);
@@ -90,14 +91,17 @@ final class SettingsPage {
 			return;
 		}
 
-		$this->maybe_save();
 		$options      = Options::get_all();
 		$sections     = FieldsData::get_sections();
 		$descriptions = FieldsData::get_descriptions();
 
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'LW Disable', 'lw-disable' ); ?></h1>
+			<h1>
+				<img src="<?php echo esc_url( LW_DISABLE_URL . 'assets/img/title-icon.svg' ); ?>" alt="" class="lw-title-icon" />
+				<?php esc_html_e( 'Lightweight Disable', 'lw-disable' ); ?>
+				<span style="font-size: 13px; font-weight: 400; color: #888;">(<?php echo esc_html( LW_DISABLE_VERSION ); ?>)</span>
+			</h1>
 
 			<?php if ( isset( $_GET['saved'] ) ) : // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>
 				<div class="notice notice-success is-dismissible">
@@ -107,7 +111,7 @@ final class SettingsPage {
 
 			<form method="post">
 				<?php wp_nonce_field( 'lw_disable_save', 'lw_disable_nonce' ); ?>
-				<input type="hidden" name="lw_disable_active_tab" value="">
+				<input type="hidden" name="lw_disable_active_tab" value="" />
 
 				<div class="lw-disable-settings">
 					<?php $this->render_tabs_nav( $sections ); ?>
@@ -182,7 +186,7 @@ final class SettingsPage {
 	 *
 	 * @return void
 	 */
-	private function maybe_save(): void {
+	public function maybe_save(): void {
 		if ( ! isset( $_POST['lw_disable_nonce'] ) ) {
 			return;
 		}
