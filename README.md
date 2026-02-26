@@ -104,3 +104,12 @@ wp lw-disable disable-all
 - [GitHub](https://github.com/lwplugins/lw-disable)
 - [Packagist](https://packagist.org/packages/lwplugins/lw-disable)
 - [LW Plugins](https://lwplugins.com)
+
+
+## Sponsor
+
+<a href="https://sinann.io/">
+  <img src="https://sinann.io/favicon.svg" alt="Sinann" width="40">
+</a>
+
+Supported by [Sinann](https://sinann.io/)
