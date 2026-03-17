@@ -35,6 +35,7 @@ final class Options {
 		return array(
 			// General.
 			'comments'              => false,
+			'admin_new_user_email'  => false,
 			// Performance.
 			'emojis'                => false,
 			'embeds'                => false,

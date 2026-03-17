@@ -25,7 +25,8 @@ final class FieldsData {
 				'title'  => __( 'General', 'lw-disable' ),
 				'icon'   => 'dashicons-admin-settings',
 				'fields' => array(
-					'comments' => __( 'Comments', 'lw-disable' ),
+					'comments'             => __( 'Comments', 'lw-disable' ),
+					'admin_new_user_email' => __( 'New User Admin Email', 'lw-disable' ),
 				),
 			),
 			'performance'  => array(
@@ -77,6 +78,7 @@ final class FieldsData {
 	public static function get_descriptions(): array {
 		return array(
 			'comments'              => __( 'Disable comments completely', 'lw-disable' ),
+			'admin_new_user_email'  => __( 'Disable admin email notification on new user registration', 'lw-disable' ),
 			'emojis'                => __( 'Disable WordPress emoji scripts and styles', 'lw-disable' ),
 			'embeds'                => __( 'Disable oEmbed discovery and scripts', 'lw-disable' ),
 			'heartbeat'             => __( 'Disable WordPress heartbeat API', 'lw-disable' ),

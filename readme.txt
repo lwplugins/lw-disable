@@ -3,7 +3,7 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -17,6 +17,7 @@ Lightweight plugin to disable WordPress features you don't need.
 = General =
 
 * Disable comments completely
+* Disable admin email notification on new user registration
 
 = Performance =
 
@@ -96,6 +97,7 @@ Disables all features (restores WordPress defaults).
 = Available features =
 
 * comments - Comments system
+* admin_new_user_email - New user admin email
 * emojis - Emoji scripts/styles
 * embeds - oEmbed system
 * heartbeat - Heartbeat API
@@ -112,6 +114,9 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.3.2 =
+* Added: Disable admin email notification on new user registration (#1)
 
 = 1.3.1 =
 * Minor fix

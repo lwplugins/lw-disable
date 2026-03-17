@@ -12,6 +12,7 @@ namespace LightweightPlugins\Disable;
 use LightweightPlugins\Disable\Admin\SettingsPage;
 use LightweightPlugins\Disable\CLI\Commands as CLICommands;
 use LightweightPlugins\Disable\Features\AdjacentPosts;
+use LightweightPlugins\Disable\Features\AdminEmails;
 use LightweightPlugins\Disable\Features\ApplicationPasswords;
 use LightweightPlugins\Disable\Features\BlockLibrary;
 use LightweightPlugins\Disable\Features\Comments;
@@ -63,6 +64,7 @@ final class Plugin {
 	private function init_features(): void {
 		// General.
 		new Comments();
+		new AdminEmails();
 
 		// Performance.
 		new Emojis();
