@@ -3,7 +3,7 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 Requires PHP: 8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,11 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.3.5 =
+* New: LW Site Manager integration - disable abilities for AI agents
+* New: lw-disable/get-options - get disabled features
+* New: lw-disable/set-options - toggle features on/off
 
 = 1.3.4 =
 * Fix: Smarter autoloader fallback - supports root Composer dependency installs

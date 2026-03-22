@@ -11,6 +11,7 @@ namespace LightweightPlugins\Disable;
 
 use LightweightPlugins\Disable\Admin\SettingsPage;
 use LightweightPlugins\Disable\CLI\Commands as CLICommands;
+use LightweightPlugins\Disable\SiteManager\Integration as SiteManagerIntegration;
 use LightweightPlugins\Disable\Features\AdjacentPosts;
 use LightweightPlugins\Disable\Features\AdminEmails;
 use LightweightPlugins\Disable\Features\ApplicationPasswords;
@@ -41,6 +42,7 @@ final class Plugin {
 		$this->init_features();
 		$this->init_admin();
 		$this->init_cli();
+		$this->init_site_manager();
 	}
 
 	/**
@@ -109,6 +111,17 @@ final class Plugin {
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			\WP_CLI::add_command( 'lw-disable', CLICommands::class );
 		}
+	}
+
+	/**
+	 * Initialize LW Site Manager integration.
+	 *
+	 * No-op if Site Manager is not active.
+	 *
+	 * @return void
+	 */
+	private function init_site_manager(): void {
+		SiteManagerIntegration::init();
 	}
 
 	/**
