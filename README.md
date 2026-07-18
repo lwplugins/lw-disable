@@ -3,7 +3,7 @@
 Disable WordPress features: comments, emojis, embeds, and more.
 
 [![Packagist](https://img.shields.io/packagist/v/lwplugins/lw-disable.svg)](https://packagist.org/packages/lwplugins/lw-disable)
-[![PHP](https://img.shields.io/badge/PHP-8.1%2B-blue.svg)](https://php.net)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-blue.svg)](https://php.net)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)](https://wordpress.org)
 [![License](https://img.shields.io/badge/License-GPL--2.0-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 

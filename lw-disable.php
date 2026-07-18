@@ -3,9 +3,9 @@
  * Plugin Name:       LW Disable
  * Plugin URI:        https://github.com/lwplugins/lw-disable
  * Description:       Lightweight disable — turn off comments, emojis, embeds, and more.
- * Version:           1.3.5
+ * Version:           1.3.6
  * Requires at least: 6.0
- * Requires PHP:      8.1
+ * Requires PHP:      8.2
  * Author:            LW Plugins
  * Author URI:        https://lwplugins.com
  * License:           GPL-2.0-or-later
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'LW_DISABLE_VERSION', '1.3.5' );
+define( 'LW_DISABLE_VERSION', '1.3.6' );
 define( 'LW_DISABLE_FILE', __FILE__ );
 define( 'LW_DISABLE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LW_DISABLE_URL', plugin_dir_url( __FILE__ ) );
@@ -59,4 +59,9 @@ function lw_disable(): Plugin {
 	return $instance;
 }
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\\lw_disable' );
+add_action(
+	'plugins_loaded',
+	static function (): void {
+		lw_disable();
+	}
+);

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.6] - 2026-07-18
+
+### Changed
+- Development quality gates: added **PHPStan level 5** and a **PHPUnit test suite** (Options characterization), both now enforced in CI alongside PHPCS; minimum PHP raised to **8.2**. Bumped `actions/checkout` to v7 and `actions/cache` to v6 (PRs #5, #6). No functional changes.
+
 ## [1.3.5] - 2026-03-22
 
 ### Added

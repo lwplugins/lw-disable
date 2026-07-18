@@ -92,4 +92,13 @@ final class Options {
 		self::$options = $options;
 		return update_option( self::OPTION_NAME, $options );
 	}
+
+	/**
+	 * Clear the in-memory options cache.
+	 *
+	 * @return void
+	 */
+	public static function clear_cache(): void {
+		self::$options = null;
+	}
 }
