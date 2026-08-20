@@ -13,7 +13,7 @@
 
 declare(strict_types=1);
 
-define( 'LW_DISABLE_VERSION', '1.3.6' );
+define( 'LW_DISABLE_VERSION', '1.3.7' );
 define( 'LW_DISABLE_FILE', __DIR__ . '/lw-disable.php' );
 define( 'LW_DISABLE_PATH', __DIR__ . '/' );
 define( 'LW_DISABLE_URL', 'https://example.test/wp-content/plugins/lw-disable/' );

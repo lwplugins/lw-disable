@@ -2,8 +2,8 @@
 Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 1.3.6
+Tested up to: 7.1
+Stable tag: 1.3.7
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,9 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.3.7 =
+* Update: Tested up to WordPress 7.1.
 
 = 1.3.6 =
 * Update: Added PHPStan level 5 and a PHPUnit test suite to CI; minimum PHP raised to 8.2. No functional changes.

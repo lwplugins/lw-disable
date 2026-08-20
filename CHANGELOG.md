@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.7] - 2026-08-20
+
+### Changed
+- Tested up to WordPress 7.1.
+
 ## [1.3.6] - 2026-07-18
 
 ### Changed
