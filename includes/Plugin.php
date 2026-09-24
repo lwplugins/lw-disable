@@ -11,6 +11,7 @@ namespace LightweightPlugins\Disable;
 
 use LightweightPlugins\Disable\Admin\SettingsPage;
 use LightweightPlugins\Disable\CLI\Commands as CLICommands;
+use LightweightPlugins\Disable\Rest\Admin\Routes as AdminRoutes;
 use LightweightPlugins\Disable\SiteManager\Integration as SiteManagerIntegration;
 use LightweightPlugins\Disable\Features\AdjacentPosts;
 use LightweightPlugins\Disable\Features\AdminEmails;
@@ -41,6 +42,7 @@ final class Plugin {
 		$this->init_hooks();
 		$this->init_features();
 		$this->init_admin();
+		$this->init_rest();
 		$this->init_cli();
 		$this->init_site_manager();
 	}
@@ -100,6 +102,15 @@ final class Plugin {
 		if ( is_admin() ) {
 			new SettingsPage();
 		}
+	}
+
+	/**
+	 * Register the admin REST routes (REST requests are not is_admin()).
+	 *
+	 * @return void
+	 */
+	private function init_rest(): void {
+		( new AdminRoutes() )->register();
 	}
 
 	/**

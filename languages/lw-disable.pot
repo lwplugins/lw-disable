@@ -2,21 +2,22 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Lightweight Disable 1.2.7\n"
-"Report-Msgid-Bugs-To: https://github.com/lwplugins/lw-disable/issues\n"
+"Project-Id-Version: LW Disable 1.4.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lw-disable\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LW Plugins <info@lwplugins.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-08T14:09:16+00:00\n"
+"POT-Creation-Date: 2026-09-24T21:20:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: lw-disable\n"
 
 #. Plugin Name of the plugin
 #: lw-disable.php
-msgid "Lightweight Disable"
+#: includes/Admin/SettingsPage.php:130
+msgid "LW Disable"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -26,7 +27,7 @@ msgstr ""
 
 #. Description of the plugin
 #: lw-disable.php
-msgid "Disable WordPress features: comments, emojis, embeds, and more."
+msgid "Lightweight disable — turn off comments, emojis, embeds, and more."
 msgstr ""
 
 #. Author of the plugin
@@ -46,16 +47,16 @@ msgstr ""
 msgid "Lightweight plugins for WordPress - minimal footprint, maximum impact."
 msgstr ""
 
-#: includes/Admin/ParentPage.php:182
+#: includes/Admin/ParentPage.php:190
 msgid "Active"
 msgstr ""
 
-#: includes/Admin/ParentPage.php:189
-#: includes/Plugin.php:133
+#: includes/Admin/ParentPage.php:197
+#: includes/Plugin.php:159
 msgid "Settings"
 msgstr ""
 
-#: includes/Admin/ParentPage.php:193
+#: includes/Admin/ParentPage.php:201
 msgid "Get Plugin"
 msgstr ""
 
@@ -67,151 +68,246 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:32
+#: includes/Admin/Settings/FieldsData.php:29
+msgid "New User Admin Email"
+msgstr ""
+
+#: includes/Admin/Settings/FieldsData.php:33
 msgid "Performance"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:35
+#: includes/Admin/Settings/FieldsData.php:36
 msgid "Emojis"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:36
+#: includes/Admin/Settings/FieldsData.php:37
 msgid "Embeds"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:37
+#: includes/Admin/Settings/FieldsData.php:38
 msgid "Heartbeat"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:38
+#: includes/Admin/Settings/FieldsData.php:39
 msgid "Block Library"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:42
+#: includes/Admin/Settings/FieldsData.php:43
 msgid "Security"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:45
+#: includes/Admin/Settings/FieldsData.php:46
 msgid "XML-RPC"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:46
+#: includes/Admin/Settings/FieldsData.php:47
 msgid "REST API"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:47
+#: includes/Admin/Settings/FieldsData.php:48
 msgid "App Passwords"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:48
+#: includes/Admin/Settings/FieldsData.php:49
 msgid "Generator"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:52
+#: includes/Admin/Settings/FieldsData.php:53
 msgid "Head Cleanup"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:55
+#: includes/Admin/Settings/FieldsData.php:56
 msgid "Shortlink"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:56
+#: includes/Admin/Settings/FieldsData.php:57
 msgid "RSD Link"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:57
+#: includes/Admin/Settings/FieldsData.php:58
 msgid "WLW Manifest"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:58
+#: includes/Admin/Settings/FieldsData.php:59
 msgid "Version Strings"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:59
+#: includes/Admin/Settings/FieldsData.php:60
 msgid "Adjacent Posts"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:63
+#: includes/Admin/Settings/FieldsData.php:64
 msgid "Content"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:66
+#: includes/Admin/Settings/FieldsData.php:67
 msgid "RSS Feeds"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:79
+#: includes/Admin/Settings/FieldsData.php:80
 msgid "Disable comments completely"
 msgstr ""
 
-#: includes/Admin/Settings/FieldsData.php:80
-msgid "Disable WordPress emoji scripts and styles"
-msgstr ""
-
 #: includes/Admin/Settings/FieldsData.php:81
-msgid "Disable oEmbed discovery and scripts"
+msgid "Disable admin email notification on new user registration"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:82
-msgid "Disable WordPress heartbeat API"
+msgid "Disable WordPress emoji scripts and styles"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:83
-msgid "Disable Gutenberg block CSS on frontend"
+msgid "Disable oEmbed discovery and scripts"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:84
-msgid "Disable XML-RPC protocol"
+msgid "Disable WordPress heartbeat API"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:85
-msgid "Restrict REST API to logged-in users"
+msgid "Disable Gutenberg block CSS on frontend"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:86
-msgid "Disable application passwords"
+msgid "Disable XML-RPC protocol"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:87
-msgid "Remove WordPress version meta tag"
+msgid "Restrict REST API to logged-in users"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:88
-msgid "Remove shortlink from head"
+msgid "Disable application passwords"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:89
-msgid "Remove Really Simple Discovery link"
+msgid "Remove WordPress version meta tag"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:90
-msgid "Remove Windows Live Writer link"
+msgid "Remove shortlink from head"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:91
-msgid "Remove ?ver= query strings from assets"
+msgid "Remove Really Simple Discovery link"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:92
-msgid "Remove prev/next post links from head"
+msgid "Remove Windows Live Writer link"
 msgstr ""
 
 #: includes/Admin/Settings/FieldsData.php:93
+msgid "Remove ?ver= query strings from assets"
+msgstr ""
+
+#: includes/Admin/Settings/FieldsData.php:94
+msgid "Remove prev/next post links from head"
+msgstr ""
+
+#: includes/Admin/Settings/FieldsData.php:95
 msgid "Disable RSS feeds completely"
 msgstr ""
 
-#: includes/Admin/SettingsPage.php:43
-#: includes/Admin/SettingsPage.php:44
+#: includes/Admin/SettingsPage.php:61
+#: includes/Admin/SettingsPage.php:62
+#: includes/SiteManager/Integration.php:38
 msgid "Disable"
 msgstr ""
 
-#: includes/Admin/SettingsPage.php:100
-msgid "LW Disable"
-msgstr ""
-
-#: includes/Admin/SettingsPage.php:104
-msgid "Settings saved."
+#: includes/Admin/SettingsPage.php:131
+msgid "The settings screen files are missing. Re-install the plugin from a release ZIP, or run \"npm install && npm run build\" in the plugin directory."
 msgstr ""
 
 #: includes/Features/RestApi.php:44
 msgid "REST API restricted to authenticated users."
+msgstr ""
+
+#: includes/SiteManager/DisableAbilities.php:38
+msgid "Get Disable Options"
+msgstr ""
+
+#: includes/SiteManager/DisableAbilities.php:39
+msgid "Get all LW Disable feature settings."
+msgstr ""
+
+#: includes/SiteManager/DisableAbilities.php:69
+msgid "Set Disable Options"
+msgstr ""
+
+#: includes/SiteManager/DisableAbilities.php:70
+msgid "Enable or disable WordPress features managed by LW Disable."
+msgstr ""
+
+#: includes/SiteManager/DisableAbilities.php:80
+msgid "Feature flags to update. Keys: comments, admin_new_user_email, emojis, embeds, heartbeat, block_library, xmlrpc, rest_api, application_passwords, generator, shortlink, rsd_link, wlw_manifest, version_strings, adjacent_posts, feeds."
+msgstr ""
+
+#: includes/SiteManager/DisableService.php:66
+msgid "Provide an options object with at least one key."
+msgstr ""
+
+#: includes/SiteManager/DisableService.php:86
+msgid "No valid option keys provided."
+msgstr ""
+
+#. translators: %d: number of options updated
+#: includes/SiteManager/DisableService.php:97
+#, php-format
+msgid "%d option(s) updated."
+msgstr ""
+
+#: includes/SiteManager/Integration.php:39
+msgid "WordPress feature disabling abilities"
+msgstr ""
+
+#: lw-disable.php:40
+msgid "Autoloader not found. Please run \"composer install\" in the plugin directory, or re-install the plugin from a release ZIP."
+msgstr ""
+
+#: build/index.js:1
+msgid "Loading…"
+msgstr ""
+
+#: build/index.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/index.js:1
+msgid "LW Plugins (opens in a new tab)"
+msgstr ""
+
+#: build/index.js:1
+msgid "LW Disable home"
+msgstr ""
+
+#: build/index.js:1
+msgid "LW Disable sections"
+msgstr ""
+
+#: build/index.js:1
+msgid "Documentation"
+msgstr ""
+
+#: build/index.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/index.js:1
+msgid "Unsaved changes"
+msgstr ""
+
+#: build/index.js:1
+msgid "Discard"
+msgstr ""
+
+#: build/index.js:1
+msgid "Save changes"
+msgstr ""
+
+#: build/index.js:1
+msgid "Turn a switch on to disable the feature it names. Turn it off to keep the WordPress default."
+msgstr ""
+
+#: build/index.js:1
+msgid "Settings saved."
 msgstr ""

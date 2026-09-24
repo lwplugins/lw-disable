@@ -4,3 +4,9 @@ composer.lock
 
 .phpunit.cache/
 .phpunit.result.cache
+
+# React admin (build/ is committed, never ignore it)
+/node_modules/
+
+# Local-only Superpowers planning docs
+/.superpowers/

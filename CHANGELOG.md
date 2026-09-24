@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.0] - 2026-09-24
+
+### Added
+- New settings screen built with WordPress components: side navigation for the five sections, a top bar with Save/Discard and a Cmd/Ctrl+S shortcut, loading skeletons and a mobile layout. Only the switches you changed are saved.
+- Admin REST API under `lw-disable/v1/admin/settings` for users with `manage_options`.
+- Hungarian translation of the new interface and of strings that were never translated (JavaScript translation file shipped in `languages/`).
+
+### Changed
+- The classic settings form, its stylesheet and script were removed.
+
 ## [1.3.8] - 2026-09-06
 
 ### Fixed

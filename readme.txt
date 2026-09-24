@@ -3,7 +3,7 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 1.3.8
+Stable tag: 1.4.0
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,12 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.4.0 =
+* New: settings screen built with WordPress components: side navigation for the five sections, a top bar with Save/Discard and a Cmd/Ctrl+S shortcut, loading skeletons and a mobile layout. Only the switches you changed are saved.
+* New: admin REST API under lw-disable/v1/admin/settings for users with manage_options.
+* New: Hungarian translation of the new interface and of strings that were never translated (JavaScript translation file shipped in languages/).
+* Change: the classic settings form, its stylesheet and script were removed.
 
 = 1.3.8 =
 * Fix: the release package and Composer dist no longer ship tests, docs or development configuration

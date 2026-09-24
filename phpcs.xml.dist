@@ -5,6 +5,10 @@
 	<file>.</file>
 	<exclude-pattern>/vendor/</exclude-pattern>
 	<exclude-pattern>/tests/</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<!-- React admin: JS sources and the generated build (build/*.asset.php). -->
+	<exclude-pattern>/src/*</exclude-pattern>
+	<exclude-pattern>/build/*</exclude-pattern>
 
 	<arg value="sp"/>
 	<arg name="basepath" value="."/>
