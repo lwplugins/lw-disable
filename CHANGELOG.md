@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.4.1] - 2026-09-25
+
+### Fixed
+- Notices from themes and other plugins (for example a theme's purchase-code or recommended-plugins notice) could show on the LW Disable screen. They are now kept off every LW Plugins screen, whatever their markup.
+
 ## [1.4.0] - 2026-09-24
 
 ### Added

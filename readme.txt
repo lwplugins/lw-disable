@@ -3,7 +3,7 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.0
 Tested up to: 7.1
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,9 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.4.1 =
+* Fix: Notices from themes and other plugins (for example a theme's purchase-code or recommended-plugins notice) could show on the LW Disable screen. They are now kept off every LW Plugins screen, whatever their markup.
 
 = 1.4.0 =
 * New: settings screen built with WordPress components: side navigation for the five sections, a top bar with Save/Discard and a Cmd/Ctrl+S shortcut, loading skeletons and a mobile layout. Only the switches you changed are saved.
