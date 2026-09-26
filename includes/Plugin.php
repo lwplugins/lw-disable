@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace LightweightPlugins\Disable;
 
+use LightweightPlugins\Disable\Admin\Hub\Hub;
 use LightweightPlugins\Disable\Admin\SettingsPage;
 use LightweightPlugins\Disable\CLI\Commands as CLICommands;
 use LightweightPlugins\Disable\Rest\Admin\Routes as AdminRoutes;
@@ -40,6 +41,7 @@ final class Plugin {
 	 */
 	public function __construct() {
 		$this->init_hooks();
+		Hub::init( LW_DISABLE_FILE );
 		$this->init_features();
 		$this->init_admin();
 		$this->init_rest();

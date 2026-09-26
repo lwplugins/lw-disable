@@ -329,3 +329,209 @@ msgstr ""
 #: build/index.js:1
 msgid "Settings saved."
 msgstr "Beállítások elmentve."
+
+#: includes/Admin/Hub/Activator.php:45
+msgid "This is not an LW plugin."
+msgstr "Ez nem LW bővítmény."
+
+#: includes/Admin/Hub/Activator.php:51
+msgid "This plugin is not installed."
+msgstr "Ez a bővítmény nincs telepítve."
+
+#: includes/Admin/Hub/Activator.php:59
+msgid "You are not allowed to activate this plugin."
+msgstr "Nincs jogod bekapcsolni ezt a bővítményt."
+
+#: includes/Admin/Hub/Page.php:132
+msgid ""
+"The LW Plugins page files are missing. Re-install the plugin from a release "
+"ZIP."
+msgstr ""
+"Hiányoznak az LW Plugins oldal fájljai. Telepítsd újra a bővítményt egy "
+"kiadási ZIP-ből."
+
+#: includes/Admin/Hub/RegistryFallback.php:29
+msgid "GDPR-compliant cookie consent banner."
+msgstr "GDPR-kompatibilis sütihozzájárulási sáv."
+
+#: includes/Admin/Hub/RegistryFallback.php:38
+msgid "Disable WordPress features like comments."
+msgstr "WordPress-funkciók kikapcsolása, például a hozzászólásoké."
+
+#: includes/Admin/Hub/RegistryFallback.php:47
+msgid "Enable WordPress features: SVG uploads and more."
+msgstr "WordPress-funkciók bekapcsolása: SVG-feltöltés és egyebek."
+
+#: includes/Admin/Hub/RegistryFallback.php:56
+msgid "Rate limiting, bot blocking, IP bans and security headers."
+msgstr "Kéréskorlátozás, botszűrés, IP-tiltás és biztonsági fejlécek."
+
+#: includes/Admin/Hub/RegistryFallback.php:65
+msgid ""
+"Lightweight image optimization — auto-convert uploads to WebP via HelloImg."
+msgstr ""
+"Könnyű képoptimalizálás: a feltöltések automatikus WebP-konverziója a "
+"HelloImg-gel."
+
+#: includes/Admin/Hub/RegistryFallback.php:74
+msgid ""
+"Headless LMS backend: courses, lessons, access, progress and quizzes over a "
+"REST API."
+msgstr ""
+"Headless LMS-háttér: kurzusok, leckék, hozzáférés, haladás és kvízek REST "
+"API-n."
+
+#: includes/Admin/Hub/RegistryFallback.php:83
+msgid ""
+"Tracking pixels: Meta, GA4, Ads, GTM, TikTok, Pinterest, Bing, Reddit, "
+"Snapchat, X."
+msgstr ""
+"Követőpixelek: Meta, GA4, Ads, GTM, TikTok, Pinterest, Bing, Reddit, "
+"Snapchat, X."
+
+#: includes/Admin/Hub/RegistryFallback.php:92
+msgid "Malware scanner for files, the database and vulnerable software."
+msgstr ""
+"Kártevőkereső a fájlokhoz, az adatbázishoz és a sérülékeny szoftverekhez."
+
+#: includes/Admin/Hub/RegistryFallback.php:101
+msgid "Essential SEO features without the bloat."
+msgstr "A lényeges SEO-funkciók, felesleg nélkül."
+
+#: includes/Admin/Hub/RegistryFallback.php:110
+msgid "Site maintenance via AI/REST using Abilities API."
+msgstr "Oldalkarbantartás AI-on és REST-en át, az Abilities API-val."
+
+#: includes/Admin/Hub/RegistryFallback.php:119
+msgid "Manage WordPress translations from community repositories."
+msgstr "WordPress-fordítások kezelése közösségi tárolókból."
+
+#: includes/Admin/Hub/RegistryFallback.php:128
+msgid "Clean up your admin — notices sidebar & widget manager."
+msgstr "Rendezett admin: értesítési oldalsáv és widgetkezelő."
+
+#: assets/hub/index.js:1
+msgid "All LW plugins on GitHub"
+msgstr "Az összes LW bővítmény a GitHubon"
+
+#. translators: %s: plugin name.
+#: assets/hub/index.js:2
+msgid "%s settings"
+msgstr "%s beállításai"
+
+#. translators: %s: plugin name.
+#: assets/hub/index.js:3
+msgid "Activate %s"
+msgstr "%s bekapcsolása"
+
+#: assets/hub/index.js:3
+msgid "Activating…"
+msgstr "Bekapcsolás…"
+
+#: assets/hub/index.js:3
+msgid "Activate"
+msgstr "Bekapcsolás"
+
+#: assets/hub/index.js:3
+msgid "GitHub"
+msgstr "GitHub"
+
+#. translators: %s: plugin name.
+#: assets/hub/index.js:4
+msgid "%s on GitHub (opens in a new tab)"
+msgstr "%s a GitHubon (új lapon nyílik meg)"
+
+#: assets/hub/index.js:4
+msgid "All"
+msgstr "Mind"
+
+#: assets/hub/index.js:4
+msgid "Inactive"
+msgstr "Kikapcsolva"
+
+#: assets/hub/index.js:4
+msgid "Not installed"
+msgstr "Nincs telepítve"
+
+#: assets/hub/index.js:4
+msgid "Plugin"
+msgstr "Bővítmény"
+
+#: assets/hub/index.js:4
+msgid "Status"
+msgstr "Állapot"
+
+#: assets/hub/index.js:4
+msgid "Version"
+msgstr "Verzió"
+
+#: assets/hub/index.js:4
+msgid "Action"
+msgstr "Művelet"
+
+#: assets/hub/index.js:4
+msgid "Beta"
+msgstr "Béta"
+
+#: assets/hub/index.js:4
+msgid "No version"
+msgstr "Nincs verzió"
+
+#. translators: %s: search text.
+#: assets/hub/index.js:5
+msgid "No plugins match “%s”."
+msgstr "Nincs találat erre: „%s”."
+
+#: assets/hub/index.js:5
+msgid "No plugins in this group."
+msgstr "Ebben a csoportban nincs bővítmény."
+
+#: assets/hub/index.js:5
+msgid "Show all plugins"
+msgstr "Az összes bővítmény mutatása"
+
+#: assets/hub/index.js:5
+msgid "Search plugins"
+msgstr "Keresés a bővítmények között"
+
+#: assets/hub/index.js:5
+msgid "Filter by status"
+msgstr "Szűrés állapot szerint"
+
+#: assets/hub/index.js:5
+msgid "active"
+msgid_plural "active"
+msgstr[0] "aktív"
+msgstr[1] "aktív"
+
+#: assets/hub/index.js:5
+msgid "inactive"
+msgid_plural "inactive"
+msgstr[0] "kikapcsolva"
+msgstr[1] "kikapcsolva"
+
+#: assets/hub/index.js:5
+msgid "not installed"
+msgid_plural "not installed"
+msgstr[0] "nincs telepítve"
+msgstr[1] "nincs telepítve"
+
+#. translators: %d: number of LW plugins listed.
+#: assets/hub/index.js:6
+msgid "%d LW plugin listed."
+msgid_plural "%d LW plugins listed."
+msgstr[0] "%d LW bővítmény látható."
+msgstr[1] "%d LW bővítmény látható."
+
+#: assets/hub/index.js:6
+msgid "That did not work. Please reload the page and try again."
+msgstr "Ez nem sikerült. Töltsd újra az oldalt, és próbáld újra."
+
+#. translators: %s: plugin name.
+#: assets/hub/index.js:7
+msgid "%s is active."
+msgstr "%s bekapcsolva."
+
+#: assets/hub/index.js:7
+msgid "Reload page"
+msgstr "Oldal újratöltése"
