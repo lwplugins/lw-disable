@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.4.5] - 2026-10-24
+
+### Fixed
+- With "Disable XML-RPC" on, no XML-RPC method is offered any more, so the whole protocol is switched off as the setting describes.
+
 ## [1.4.4] - 2026-10-03
 
 ### Fixed

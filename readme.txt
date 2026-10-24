@@ -3,7 +3,7 @@ Contributors: lwplugins
 Tags: disable, performance, security
 Requires at least: 6.6
 Tested up to: 7.1
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -114,6 +114,9 @@ Disables all features (restores WordPress defaults).
 * feeds - RSS feeds
 
 == Changelog ==
+
+= 1.4.5 =
+* Fix: With "Disable XML-RPC" on, no XML-RPC method is offered any more, so the whole protocol is switched off as the setting describes.
 
 = 1.4.4 =
 * Fix: The admin Docs link now opens the plugin's page on docs.lwplugins.com, in Hungarian for Hungarian admin users.
